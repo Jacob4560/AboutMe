@@ -1,0 +1,45 @@
+body {
+    background-color: #344e41;
+    color: white;
+    font-size: 40pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5vh;
+}
+
+#header {
+    font-size: 20pt;
+    height: auto;
+    background-color: #3a5a40;
+    padding: 2vh;
+    text-align: center;
+}
+
+#menu {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+#menu-items {
+    margin-left: 5vh;
+}
+
+#menu-items:hover > .item {
+    opacity: 0.1;
+}
+
+#menu-items:hover > .item:hover {
+    opacity: 1;
+    font-size: 50pt;
+}
+
+.item {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transition-property: opacity, font-size;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+}
