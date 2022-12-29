@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-
-<link rel="stylesheet" href="styles.css">
-<script src=""></script>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a7dfa825e5.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
 <body>
-<div id="header">
-    <p> Welcome to my online portfolio. Click the links below
-        to view my experiences, projects, and more.
-</div>
-<div id="menu">
-    <div id="menu-items">
-        <a href="" class="item">Story</a>
-        <a href="" class="item">Software</a>
-        <a href="" class="item">Firmware</a>
-        <a href="" class="item">Hardware</a>
-        <a href="" class="item">Contact Information</a>
+    <div id="info">
+        <img src="Signature.png"></img>
+        <ul>
+            <ul>
+            <li><p><i class="fa fa-phone" aria-hidden="true"></i></i> (360)591-6360</p></li>
+            <li><p><i class="fa fa-envelope" aria-hidden="true"></i>  jacobl4560@gmail.com</p></li>
+        </ul>
+            <li><a href="https://www.linkedin.com/in/jacoblush/" target="_blank" class="social">
+                <i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="https://github.com/Jacob4560" target="_blank" class="social"><i class="fa-brands fa-github">
+            </i></a></li>
     </div>
-</div>
-
+    <div id="menu" activeIndex="0">
+        <div id="menu-items">
+            <a href="" class="item">Story <i class="fa-solid fa-image-portrait disabled"></i></a>
+            <a href="" class="item">Software <i class="fa-solid fa-laptop-code disabled"></i></a>
+            <a href="" class="item"> Firmware <i class="fa-solid fa-microchip disabled"></i></a>
+            <a href="" class="item"> Hardware <i class="fa-sharp fa-solid fa-wave-square disabled"></i></a>
+        </div>
+        <div id="menu-background"></div>
+        <div id="menu-background-image"></div>
+    </div>
 </body>
+
 </html>

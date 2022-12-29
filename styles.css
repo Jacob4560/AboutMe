@@ -3,21 +3,48 @@ body {
     color: white;
     font-size: 40pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 5vh;
+    margin: 0;
 }
 
-#header {
-    font-size: 20pt;
-    height: auto;
-    background-color: #3a5a40;
-    padding: 2vh;
-    text-align: center;
+#info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12pt;
+    position: relative;
+    z-index: 3;
+    padding: 1vh 5vh 1vh 5vh;
+    align-items: center;
+    height: 5vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#info > img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 3vh;
+}
+
+li > a { 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul {
+    margin: 0;
+    display: inline-block;
 }
 
 #menu {
     height: 75vh;
     display: flex;
     align-items: center;
+    margin-left: 8vh;
 }
 
 #menu-items {
@@ -25,7 +52,11 @@ body {
 }
 
 #menu-items:hover > .item {
-    opacity: 0.1;
+    opacity: 0.3;
+}
+
+#menu-items:hover > .item:hover > .disabled {
+   opacity: 1;
 }
 
 #menu-items:hover > .item:hover {
@@ -39,7 +70,97 @@ body {
     text-decoration: none;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    transition-property: opacity, font-size;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
+    transition: opacity 300ms ease, font-size 300ms ease;
+    position: relative;
+    z-index: 2;
 }
+
+#menu-background {
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(
+        rgba(0, 0, 0, 0.1) 85%,
+        transparent 0%
+    );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    transition: opacity 500ms ease, background-size 500ms ease, background-position 500ms ease;
+}
+
+#menu-background-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    opacity: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-position 500ms ease;
+}
+
+#info {
+    width: max-width;
+}
+
+#menu-items:hover ~ #menu-background {
+    background-size: 11vmin 11vmin;
+    
+}
+
+#menu[activeIndex="0"] > #menu-background {
+    background-position: 0% -20%;
+}
+
+#menu[activeIndex="1"] > #menu-background {
+    background-position: 0% -40%;
+}
+
+#menu[activeIndex="2"] > #menu-background {
+    background-position: 0% -60%;
+}
+
+#menu[activeIndex="3"] > #menu-background {
+    background-position: 0% -80%;
+}
+
+#menu[activeIndex="0"] > #menu-background-image {
+    background-position: 0% 10%;
+}
+
+#menu[activeIndex="1"] > #menu-background-image {
+    background-position: 0% 20%;
+}
+
+#menu[activeIndex="2"] > #menu-background-image {
+    background-position: 0% 30%;
+}
+
+#menu[activeIndex="3"] > #menu-background-image {
+    background-position: 0% 40%;
+}
+
+.social {
+    font-size: 2.5em;
+    position: relative;
+    top: 0.5vh;
+    opacity: 0.3;
+    transition: opacity 200ms ease, font-size 200ms ease;
+}
+
+.social:hover {
+    font-size: 3em;
+    opacity: 1;
+}
+
+.disabled {
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
