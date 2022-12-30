@@ -94,7 +94,7 @@ ul {
 #menu-background-image {
     height: 100%;
     width: 100%;
-    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     position: absolute;
     z-index: 0;
     left: 0px;
@@ -102,7 +102,7 @@ ul {
     opacity: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: background-position 500ms ease;
+    transition: background-position 500ms ease, background-image 200ms ease;
 }
 
 #info {
@@ -111,10 +111,9 @@ ul {
 
 #menu-items:hover ~ #menu-background {
     background-size: 11vmin 11vmin;
-    
 }
 
-#menu[activeIndex="0"] > #menu-background {
+#menu[activeIndex="0"] > #menu-background0 {
     background-position: 0% -20%;
 }
 
@@ -132,18 +131,22 @@ ul {
 
 #menu[activeIndex="0"] > #menu-background-image {
     background-position: 0% 10%;
+    background-image: url(https://images.unsplash.com/photo-1602987612613-fd86702182c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
 }
 
 #menu[activeIndex="1"] > #menu-background-image {
     background-position: 0% 20%;
+    background-image: url(https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 }
 
 #menu[activeIndex="2"] > #menu-background-image {
     background-position: 0% 30%;
+    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.&3ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
 
 #menu[activeIndex="3"] > #menu-background-image {
     background-position: 0% 40%;
+    background-image: url(https://images.unsplash.com/photo-1562877773-a37120131ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
 }
 
 .social {
