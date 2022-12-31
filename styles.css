@@ -87,14 +87,13 @@ ul {
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 1;
+    z-index: 0;
     transition: opacity 500ms ease, background-size 500ms ease, background-position 500ms ease;
 }
 
 #menu-background-image {
     height: 100%;
     width: 100%;
-    background: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
     position: absolute;
     z-index: 0;
     left: 0px;
@@ -105,15 +104,24 @@ ul {
     transition: background-position 500ms ease, background-image 200ms ease;
 }
 
-#info {
-    width: max-width;
+#menu-background-image-story {
+    height: 100%;
+    width: 100%;
+    background: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/494000/494479-south-bend-washington.jpg);
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px;
+    opacity: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #menu-items:hover ~ #menu-background {
     background-size: 11vmin 11vmin;
 }
 
-#menu[activeIndex="0"] > #menu-background0 {
+#menu[activeIndex="0"] > #menu-background {
     background-position: 0% -20%;
 }
 
@@ -167,3 +175,21 @@ ul {
     transition: opacity 200ms ease;
 }
 
+#container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+#story {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
