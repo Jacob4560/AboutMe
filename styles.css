@@ -1,5 +1,7 @@
 body {
+    background-image: url(img/filip-zrnzevic-QsWG0kjPQRY-unsplash.png);
     background-color: #344e41;
+    background-size: cover;
     color: white;
     font-size: 40pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -7,20 +9,31 @@ body {
 }
 
 #info {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 12pt;
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    z-index: 5;
+    top: 0;
     padding: 1vh 5vh 1vh 5vh;
     align-items: center;
-    height: 5vh;
+    height: 3vh;
     background-color: rgba(0, 0, 0, 0.3);
+}   
+
+a {
+    max-height: 100%;
 }
 
-#info > img {
-    max-height: 100%;
-    max-width: 100%;
+
+a > img {
+    height: 3vh;
+    transition: height 200ms ease;
+}
+
+a:hover > img {
+    height: 4vh;
 }
 
 li {
@@ -36,8 +49,17 @@ li > a {
 }
 
 ul {
+
     margin: 0;
+    padding: 0;
     display: inline-block;
+}
+
+#info > ul {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: end;
+    padding-right: 5%;
 }
 
 #menu {
@@ -76,15 +98,15 @@ ul {
 }
 
 #menu-background {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: radial-gradient(
-        rgba(0, 0, 0, 0.1) 85%,
+        rgba(0, 0, 0, 0.075) 85%,
         transparent 0%
     );
     background-position: 0% 0%;
     background-size: 12vmin 12vmin;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     z-index: 0;
@@ -104,21 +126,129 @@ ul {
     transition: background-position 500ms ease, background-image 200ms ease;
 }
 
+#menu-items:hover ~ #menu-background {
+    background-size: 11vmin 11vmin;
+}
+
+.social {
+    font-size: 2.5em;
+    position: relative;
+    top: 0.5vh;
+    opacity: 0.3;
+    transition: opacity 200ms ease, font-size 200ms ease;
+}
+
+.social:hover {
+    font-size: 3em;
+    opacity: 1;
+}
+
+.disabled {
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
 #menu-background-image-story {
     height: 100%;
     width: 100%;
-    background: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/494000/494479-south-bend-washington.jpg);
     position: absolute;
     z-index: 0;
     left: 0px;
     top: 0px;
     opacity: 50%;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
-#menu-items:hover ~ #menu-background {
+#container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.story {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    margin: 1em;
+    margin-top: 0;
+}
+
+h3 {
+    padding: 0.25em;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.story > p {
+    font-size: 16pt;
+}
+
+.imagecontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 35%;
+}
+
+.storyimg {
+    max-height: 25vh;
+    transition: max-height 300ms ease;
+}
+
+.storyimg:hover {
+    max-height: 35vh;
+    border: white solid 5pt;
+}
+
+figcaption {
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 11pt;
+    transition: opacity 300ms ease, font-size 300ms ease;;
+}
+
+.storyimg:hover ~ figcaption {
+    opacity: 1;
+    font-size: 18pt;
+}
+
+#container[shrink="1"] ~ #menu-background {
     background-size: 11vmin 11vmin;
+}
+
+#container[activeIndex="0"] ~ #menu-background {
+    background-position: 0% -40%;
+}
+
+#container[activeIndex="1"] ~ #menu-background {
+    background-position: 0% -80%;
+}
+
+#container[activeIndex="2"] ~ #menu-background {
+    background-position: 0% -120%;
+}
+
+#container[activeIndex="3"] ~ #menu-background {
+    background-position: 0% -160%;
+}
+
+#container[activeIndex="4"] ~ #menu-background {
+    background-position: 0% -200%;
 }
 
 #menu[activeIndex="0"] > #menu-background {
@@ -155,41 +285,4 @@ ul {
 #menu[activeIndex="3"] > #menu-background-image {
     background-position: 0% 40%;
     background-image: url(https://images.unsplash.com/photo-1562877773-a37120131ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
-}
-
-.social {
-    font-size: 2.5em;
-    position: relative;
-    top: 0.5vh;
-    opacity: 0.3;
-    transition: opacity 200ms ease, font-size 200ms ease;
-}
-
-.social:hover {
-    font-size: 3em;
-    opacity: 1;
-}
-
-.disabled {
-    opacity: 0;
-    transition: opacity 200ms ease;
-}
-
-#container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-}
-
-#story {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 50%;
-    display: flex;
-    justify-content: center;
 }
