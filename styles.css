@@ -23,6 +23,7 @@ body {
 }   
 
 a {
+    color: white;
     max-height: 100%;
 }
 
@@ -231,11 +232,13 @@ iframe {
 
 .storyimg {
     max-height: 25vh;
-    transition: max-height 300ms ease;
+    max-width: 35vh;
+    transition: max-height 300ms ease, max-width 300ms ease;;
 }
 
 .storyimg:hover {
     max-height: 35vh;
+    max-width: 50vh;
     border: white solid 5pt;
 }
 
@@ -251,7 +254,7 @@ figcaption {
     transition: opacity 300ms ease, font-size 300ms ease;;
 }
 
-.storyimg:hover ~ figcaption {
+.storyimg:hover ~ figcaption,  .storyvid:hover ~ figcaption{
     opacity: 1;
     font-size: 18pt;
 }

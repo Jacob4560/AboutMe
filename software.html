@@ -29,8 +29,9 @@
             <p>From June 2021 to September 2021 I was an intern at Amazon Web Services for the Web Application Firewall (WAF) team
                 which focuses on providing users with cybersecurity solutions for their applications. I was tasked with reworking
                 the customer log delivery system for the team. I independently researched, proposed, implemented, tested, and deployed the 
-                project to finish. Using primarily Java and Ruby, I was able to deliver the project which reduced log throttling rates,
-                tripled log delivery method options for users, and lowered operating costs.
+                project to finish. Using primarily Java and Ruby, I was able to improve the functionality of the REST APIs that the team used
+                to power their costumer logging system. Upon the delivery of the project log throttling rates were reduced,
+                log delivery method options for users were tripled, and operating costs were lowered.
             </p>
         </div>
 
@@ -45,7 +46,7 @@
                 to collaborate simultaneously on the project.
             <div class="videocontainer">
                 <iframe class="storyvid" allow="fullscreen" src="https://www.youtube.com/embed/cQG2wNTRtdo"></iframe>
-                <figcaption></figcaption>
+                <figcaption>A demo video showcasing the functionality of Wampus</figcaption>
             </div>
         </div>
 
@@ -53,30 +54,53 @@
         <h4>AWS, Microservices, GraphQL APIs, IoT Devices, Databases</h4>
         <div class="story">
             <div class="imagecontainer">
-                <img src="img/school.jpeg" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="img/safestove.png" class="storyimg"></img>
+                <figcaption>A Safe Stove device in a prototype case. Includes PCB, sensor connections, and an on/off switch.</figcaption>
             </div>
-            <p> My first capstone project
+            <p> Safe Stove was my first of two capstone projects at the University of Washington. My team decided to design an Internet of Things (IoT) device which
+                would be attached above a stove and would send temperature data and alerts to a companion app on the user's mobile device. Safe Stove would send an alert,
+                after a customized time duration, if the stove top was turned on and there was no activity in the kitchen. I was responsible for integrating the device with
+                AWS for data storage and processing. The device uses Wi-Fi to to send tempurate and motion data to the AWS IoT Core microservice. The data is then formatted
+                and sent to AWS DynamoDB where data for each unique Safe Stove device is stored. Data is given to the mobile app from DynamoDB using a GraphQL API created using AWS Appsync
+                and AWS Amplify. The backend for the project was cheap, fast, scalable, and worked with little error.
+
             </p>
         </div>
 
-        <h3>Project 3</h3>
+        <h3>Crafter</h3>
+        <h4>Javascript, node.js, HTTP APIs,  HTML, CSS</h4>
         <div class="story">
             <p>
+                Crafter was a silly game project that utilized node.js to create a web server which allowed visitors to play a game where they could
+                gather resources, unlock tools, and construct buildings. Gathering and crafting are powered via backend HTTP requests to the web server.
+                The front end consists of vanilla Javascript, HTML, and CSS. My favorite part of Crafter was designing the weird cryptid mascot called
+                "Mr. Vibes" who is the most expensive item to craft in the game (seen in the screenshot, at the top left corner next to a house).
             </p>
             <div class="imagecontainer">
-                <img src="img/university.png" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="img/crafter.PNG" class="storyimg"></img>
+                <figcaption>A picture of Crafter where the player has collected enough wood, stone, and ore to build a house and Mr. Vibes</figcaption>
             </div>
         </div>
 
-        <h3>Project 4</h3>
+        <h3>Film Revenue and Rating Analysis Paper</h3>
+        <h4>Python, Machine Learning, Data Analysis & Visualization, Scikit-learn, Pandas, Numpy, Matplotlib</h4>
         <div class="story">
             <div class="imagecontainer">
-                <img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="img/paper.png" class="storyimg"></img>
+                <figcaption>
+                    <br><br>
+                    A graph generated using Matplotlib which shows the average rating for different genres of movies (ratings range from 1 to 5).
+                </figcaption>
             </div>
             <p>
+                Along with a fellow classmate, I wrote a 17 page analysis paper called "Predicting Film Financial and Critical Success using Graphical Analysis and Machine Learning Techniques."
+                Film data was analyzed from a large dataset which included information on ratings, revenue, release date, and more using Numpy and Pandas. MatplotLib was used to generate graphs
+                for visual analysis. Using Scikit-learn's linear regression machine learning functions, we predicted the ratings and revenues of future films based off of several features.
+                We were able to reasonably accurately predict film ratings with an average error of about 0.5 rating.
+
+                <br><br>
+                <a href="src/Report.pdf" download><i color="red">Click here to download a copy of the report!</i></a>
+            </p>
         </div>
         
     </div>
