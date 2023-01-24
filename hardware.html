@@ -18,57 +18,106 @@
             </i></a></li>
     </div>
     <div id="container">
-        <h3>Software Experiences</h3>
+        <h3>AC to DC Variable Boost Converter</h3>
+        <h4>Analog Circuit Design, Hardware Simulation, LTSpice, Oscilloscopes</h4>
         <div class="story">
             
             <div class="imagecontainer">
-                <img src="img/portrait.jpg" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="img/converter_board.jpg" class="storyimg"></img>
+                <figcaption>Wires, capacitors, diodes, inductors, and more were used to build the converter.</figcaption>
             </div>
-            <p>This will page contain software experiences.
-            </p>
-        </div>
-
-        <h3>Project 1</h3>
-        <div class="story">
-            <p>
+            <p>The final project for my analog devices class was to design, simulate, and then build an AC to DC variable boost converter.
+                The circuit was able to produce a 10V to 20V DC output from a 10V input from an AC
+                transformer.
+                The full circuit consisted of several subcircuits including a full-wave rectifier, a boost converter, potentiometer for
+                changing load voltage, and load. 
+                We had to meet a lot of requirements, e.g., ripple voltage of the output had to be less than 100mv, the clock used to
+                power our transistor in the boost converter subcircuit had to be running at 40kHz, and much, much more. The simulation
+                was built using LTSpice, and once all the required values were achieved in simulation, the design was built on a breadboard.
+                Using oscilloscopes from a lab station at the University of Washington's ECE building, the desired output values were verified
+                along with values for each subcircuit.
             </p>
             <div class="imagecontainer">
-                <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.6435-9/92339021_10156937389782385_248270034789466112_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=QK3Na3L-VAkAX8ex9by&_nc_ht=scontent-sea1-1.xx&oh=00_AfAdJWajEHPIr9hvXrCNsu43pB2JwTcwz9ziwEC0pTJz6Q&oe=63DB0A65" class="storyimg"></img>
-                <figcaption></figcaption>
-            </div>
-        </div>
-
-        <h3>Project 2</h3>
-        <div class="story">
-            <div class="imagecontainer">
-                <img src="img/school.jpeg" class="storyimg"></img>
-                <figcaption></figcaption>
-            </div>
-            <p>
-            </p>
-        </div>
-
-        <h3>Project 3</h3>
-        <div class="story">
-            <p>
-            </p>
-            <div class="imagecontainer">
-                <img src="img/university.png" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="img/converter_simulation.jpg" class="storyimg"></img>
+                <figcaption>An LTSPice simulation showing an AC input wave of 10V being converted to a DC output wave of 20V.</figcaption>
             </div>
         </div>
 
-        <h3>Project 4</h3>
+        <h3>DubHacks 2022 - Agricultural Info IoT Device</h3>
+        <h4>Embedded Systems, IoT Devices, Hackathon, Networking</h4>
         <div class="story">
+            <p> During the DubHacks 2022 hackathon, I partnered with other three students that I had just met to work on a project using
+                T-Mobile's then unreleased DevEdge IoT kit. We were felt very lucky to have the opportunity to work with such
+                new, interesting technology! During the span of 24 hours, we came up with the idea to use the kit's temperature sensor,
+                ambient light sensor, and GNSS to create a device which would help users find the ideal conditions for plant growth.
+                Although we were not able to get it fully working, we learned a lot about networking using LTE, project planning, and
+                working with unfamiliar SDKs. 
+            </p>
             <div class="imagecontainer">
-                <img src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="storyimg"></img>
-                <figcaption></figcaption>
+                <img src="https://www.t-mobile.com/news/_admin/uploads/2022/11/NEWSROOM-hero-Dev-Edge-Kit-11-16-22-1-1250x615.png" class="storyimg"></img>
+                <figcaption>A picture of the T-Mobile DevEdge kit, from their website.</figcaption>
             </div>
-            <p>
+            
         </div>
-        
+
+        <h3>Conway's Game of Life on DE1 FPGA Board</h3>
+        <h4>FPGA, Verilog HDL, Quartus Hardware Simulation, Finite State Machines</h4>
+        <div class="story">
+            <div class="videocontainer">
+                <iframe class="storyvid" allow="fullscreen" src="https://www.youtube.com/embed/4QgQslc-NW8"></iframe>
+                <figcaption>A demo video showcasing Conway's Game of Life running on a 16x16 LED board.</figcaption>
+            </div>
+            <p>For a my final project for one of my digital circuits classes, I chose to simulate
+                <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a>
+                algorithm on an FPGA using a 16x16 array of LEDs. Conway's Game of Life is an algorithm
+                which simulates constantly evolving automotons. First, I designed my logic using
+                a finite state machine graph. Then, I programmed the board using Verilog (a hardware
+                description language). Afterwards, I used Quartus to simulate and verify my signals 
+                before finally running the code on the LED display. The result is both visually appealing
+                and intriguing to examine logically. Users can draw a starting configuration using the development board's
+                buttons and switches.
+            </p>
+        </div>
+
+        <h3>Conway's Game of Life on DE1 FPGA Board</h3>
+        <h4>FPGA, Verilog HDL, Quartus Hardware Simulation, Algorithmic State Machines, Python</h4>
+        <div class="story">
+            
+            <p>Another digital circuits project that I chose to create was an audio frequency visualizer.
+            The visualizer drives a monitor display which draws circles with radius corresponding to the frequency
+            of different audio files. For fun, I decided to make it able to draw different colors of circles.
+            It grabs data from a FIFO buffer which contains audio frequency values. These frequency
+            values were generated from a audio files using a custom Python script. The development process was
+            essentially the same as my Conway's Game of Life project, but instead used an algorithmic state machine
+            design instead of a finite state machine. The switches are used to change the audio file being input to
+            the algorithm, and also to control the color of the pixels being drawn. 
+            </p>
+            <div class="videocontainer">
+                <iframe class="storyvid" allow="fullscreen" src="https://www.youtube.com/embed/qb6Zm0ZVPNU"></iframe>
+                <figcaption>A demo video showcasing the frequency visualizer.</figcaption>
+            </div>
+        </div>
+
+        <h3>Nap Gadget</h3>
+        <h4>Embedded Systems, C, Real-time Operating Systems, GPIO, SPI, Firmware Drivers, Arduino</h4>
+        <div class="story">
+            <div class="videocontainer">
+                <iframe class="storyvid" allow="fullscreen" src="https://www.youtube.com/embed/_19SosOXqbY"></iframe>
+                <figcaption>A demo video showcasing the nap gadget.</figcaption>
+            </div>
+            <p>My final project for my embedded systems class was a nap gadget that I built with my lab partner.
+                We used FreeRTOS to manage the running, sleeping, and killing of processes. Processes included getting input from
+                an SPI thumbstick which I wrote the driver for, modifying values on an LCD display, changing the frequency of the speaker
+                which we also write a custom driver for, and getting input from a GPIO keypad. Users can set an alarm timer using the thumbstick, and then once the timer
+                expires the speaker will play "Never Gonna Give You Up" by Rick Astley (yes, we did Rickroll our proffessor). Entering the correct passcode on the
+                keypad will stop the song from playing. Information about the timer, music speed, and passcode are printed on the LCD display.
+                The thumbstick can also modify the speed at which the song is played. The entire project is coded in C onto an Arduino MEGA microcontroller.
+            </p>
+            
+        </div>
+
     </div>
+    
     <div id="menu-background"></div>
     <div id="menu-background-image-story"></div>
 </body>

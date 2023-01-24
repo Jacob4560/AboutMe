@@ -223,11 +223,11 @@ h4 {
 iframe {
     width: 100%;
     height: 100%;
+    resize: both;
 }
 
 .videocontainer {
     flex: 0 0 35%;
-    height: 15vh;
 }
 
 .storyimg {
@@ -244,6 +244,8 @@ iframe {
 
 .storyvid:hover {
     border: white solid 5pt;
+    height: 25vh;
+    width: 50vh;
 }
 
 figcaption {
